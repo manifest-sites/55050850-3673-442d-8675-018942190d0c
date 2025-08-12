@@ -1,22 +1,16 @@
-import { useState, useEffect } from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Monetization from './components/monetization/Monetization'
-import HelloWorld from './components/HelloWorld'
-import About from './components/About'
-import Navigation from './components/Navigation'
-import { getRouterBasename } from './utils/routerUtils'
+import Calculator from './components/Calculator'
 
 function App() {
 
   return (
     <Monetization>
-      <Router basename={getRouterBasename()}>
-        <Navigation />
-        <Routes>
-          <Route path="/" element={<HelloWorld />} />
-          <Route path="/about" element={<About />} />
-        </Routes>
-      </Router>
+      <div className="min-h-screen bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center p-4">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-8">Simple Calculator</h1>
+          <Calculator />
+        </div>
+      </div>
     </Monetization>
   )
 }
